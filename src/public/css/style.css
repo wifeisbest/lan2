@@ -1,0 +1,105 @@
+.header{
+    height: 3rem;
+    background-color: green;
+    font-weight: 600;  
+}
+.list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.iteam{
+    padding: 0 10px;
+}
+.wrapp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 980px;
+    margin: auto;
+    height: 3rem;
+}
+.app{
+    max-width: 980px;
+    margin: auto;
+}
+.one{
+    text-align: center;
+}
+.heading{
+    text-align: center;
+    margin: 20px 0;
+    border-bottom: 2px solid green;
+}
+.form_group{
+    margin: 12px 0;
+}
+label{
+    display: block;
+    margin: 3px;
+    font-weight: 400;
+
+}
+form{
+    margin: 30px 0 0 200px;
+    text-align: left;
+}
+button{
+    padding: 8px 10px;
+    background-color: green;
+    font-weight: 900;
+    border-radius: 6px;
+    outline: none;
+}
+input{
+    outline: none;
+}
+button:hover{
+    opacity: 0.6;
+}
+table{
+    width: 50%;
+    margin: 50px auto 0 auto;
+}
+table,th,td{
+    border: 1px solid green;
+    border-collapse: collapse;  
+}
+th,td{
+    padding: 5px;
+}
+.link_td{
+    margin-left: 16px;
+}
+body{
+    position: relative;
+}
+.modal{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    
+    background-color: rgba(7, 7, 7, 0.6);
+}
+.modal_container{
+    margin: 100px ;
+    height: 100px;
+    width: 300px;
+    background-color: blanchedalmond;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+.modal_container h3{
+    margin-bottom: 8px;
+}
+.danger{
+    background-color: red;
+    margin-right: 19px;
+}
+#id01{
+    display: none;
+}

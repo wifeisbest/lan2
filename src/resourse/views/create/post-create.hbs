@@ -1,0 +1,74 @@
+<div class="one app">
+    <h1>Update Names</h1>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Age</th>
+            <th></th>
+            
+        </tr>
+        {{#each duongs}}
+            <tr>            
+                <th>{{sum @index 1}}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.color}}</td>
+                <td>{{this.age}}</td> 
+                <td>
+                    <a href="/updel/{{this._id}}/update">Update</a>
+                    <a
+                     onclick="document.getElementById('id01').style.display='block'"
+                     data-id = "{{this._id}}"
+                     id="one"
+                     class="link_td" href="#">Delete
+                    </a>
+                </td>              
+            </tr>
+        {{/each}}   
+    </table>
+</div>
+{{!-- modal --}}
+
+<div class="modal" id="id01">
+
+    <div class="modal_container">
+        <h3> Are you sure delete ?</h3>
+        <button id="btn-delete" class="danger">Yes</button>
+        <button onclick="document.getElementById('id01').style.display='none'">No</button>
+    </div>
+</div>
+
+<form id="delete-name" method="POST" action=""></form>
+<script>
+   
+   window.onload = function (){
+        // Get the modal
+        var modal = document.getElementById('id01');
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        var deleteform = document.getElementById('delete-name');
+        
+        var getID;
+        var btnDelete = document.getElementById('btn-delete');
+        btnDelete.onclick = function(){
+            deleteform.action = '/updel/' + getID + '?_method=DELETE';
+            deleteform.submit();
+        }
+        
+        let article = document.querySelectorAll('#one');
+            article.forEach(function(x,i){
+                x.addEventListener('click',function(){
+                    getID = x.dataset.id ;
+                })
+            })
+   }
+    
+
+    
+</script>

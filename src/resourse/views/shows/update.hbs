@@ -1,0 +1,21 @@
+<div class="one app">
+    <h1>Update</h1>
+    <form method="POST" action="/updel/{{duongs._id}}?_method=PUT">
+        <div class="form_group">
+            <label for="name">Name</label>
+            <input type="text"  value="{{duongs.name}}"name="name">
+        </div>
+        
+        <div class="form_group">
+                <label for="color">Color</label>
+                <input type="text"  value="{{duongs.color}}"name="color">
+        </div>
+        
+        <div class="form_group">
+            <label for="age">Age</label>
+            <input type="text"  value="{{duongs.age}}"name="age">
+        </div>
+        
+        <button type="submit">Update</button>
+    </form>
+</div>
