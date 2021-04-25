@@ -25,6 +25,7 @@ app.use(express.json());
 app.set('view engine','.hbs');
 app.set('views',path.join(__dirname, 'resourse','views'));
 app.use(methodOverride('_method'));
+
 // =========== Require local file================\\
 const Router = require('./routers');
 const db= require('./config/db');
