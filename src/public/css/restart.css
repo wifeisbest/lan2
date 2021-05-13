@@ -18,6 +18,7 @@ a{
 body{
     font-family:'Poppins', sans-serif;
     margin: 0;
+    background-color: #b5a5f6;
 }
 .grid {
     width: 100%;
